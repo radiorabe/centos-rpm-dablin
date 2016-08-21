@@ -10,6 +10,7 @@ Patch0:   dablin-fdk-aac.patch
 
 BuildRequires: gcc-c++
 BuildRequires: libfec-odr-devel
+BuildRequires: fdk-aac-devel
 BuildRequires: fdk-aac-dabplus-odr
 BuildRequires: libmpg123-devel
 BuildRequires: faad2-devel
