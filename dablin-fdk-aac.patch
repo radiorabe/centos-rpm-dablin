@@ -1,0 +1,9 @@
+--- Makefile-orig       2016-08-21 07:44:58.145000000 -0400
++++ Makefile    2016-08-21 07:45:22.831000000 -0400
+@@ -1,5 +1,5 @@
+ # uncomment the following line to use FDK-AAC instead of FAAD2 for audio decoding:
+-#use_fdk-aac = true
++use_fdk-aac = true
+ 
+ # uncomment the following line to disable SDL output:
+ #disable_sdl = true
