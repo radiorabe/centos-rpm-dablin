@@ -1,4 +1,4 @@
-# centos-rpm-fdk-aac-dabplus-odr
+# centos-rpm-dablin
 CentOS 7 RPM Specfile for [dablin](https://github.com/Opendigitalradio/dablin) which is part of [RaBe's DAB / DAB+ broadcasting package collection](https://build.opensuse.org/project/show/home:radiorabe:dab).
 
 ## Usage
