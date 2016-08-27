@@ -36,7 +36,6 @@ BuildRequires: gcc-c++
 BuildRequires: libfec-odr-devel
 BuildRequires: libfdk-aac-dabplus-odr-devel
 BuildRequires: libmpg123-devel
-BuildRequires: faad2-devel
 BuildRequires: SDL2-devel
 BuildRequires: gtkmm30-devel
 
