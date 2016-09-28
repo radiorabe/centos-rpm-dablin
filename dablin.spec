@@ -25,7 +25,7 @@
 Name:     dablin
 
 Version:  1.0.0
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 License:  GPLv3+
 URL:      https://github.com/Opendigitalradio/dablin
@@ -34,7 +34,7 @@ Patch0:   dablin-fdk-aac.patch
 
 BuildRequires: gcc-c++
 BuildRequires: libfec-odr-devel
-BuildRequires: libfdk-aac-dabplus-odr-devel
+BuildRequires: fdk-aac-dabplus-odr-devel
 BuildRequires: libmpg123-devel
 BuildRequires: SDL2-devel
 BuildRequires: gtkmm30-devel
@@ -59,7 +59,6 @@ from a stored ensemble recording (frame-aligned ETI-NI). Both DAB (MP2) and DAB+
 
 # Use Opendigitalradio's modified version of fdk-aac (fdk-aac-dabplus)
 %patch0
-sed -i -e 's|<fdk-aac/\(aacdecoder_lib.h\)>|<fdk-dabplus/\1>|' dabplus_decoder.h
 
 %build
 make
@@ -78,6 +77,9 @@ install dablin_gtk %{buildroot}/usr/bin/
 
 
 %changelog
+* Wed Sep 28 2016 Lucas Bickel <hairmare@purplehaze.ch> - 1.0.0-2
+- Adapted to accommodate changes to upstream fdk-aac-dabplus-odr package
+
 * Thu Aug 25 2016 Christian Affolter <c.affolter@purplehaze.ch> - 1.0.0-1
 - Switched from Git master to first upstream release
 - Adapted build dependency, to match the new name of libfdk-aac-dabplus-odr-devel

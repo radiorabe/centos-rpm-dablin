@@ -7,16 +7,3 @@
  
  # uncomment the following line to disable SDL output:
  #disable_sdl = true
-@@ -27,10 +27,10 @@
- 
- ifdef use_fdk-aac
- 	CFLAGS += -DDABLIN_AAC_FDKAAC
--	LDFLAGS += -lfdk-aac
-+	LDFLAGS += -lfdk-dabplus
- else
- 	CFLAGS += -DDABLIN_AAC_FAAD2
--	LDFLAGS += -lfaad
-+	LDFLAGS += -lfdk-dabplus
- endif
- 
- ifndef disable_sdl
