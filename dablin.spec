@@ -33,7 +33,7 @@ Source0:  https://github.com/Opendigitalradio/dablin/archive/%{version}.tar.gz#/
 
 BuildRequires: gcc-c++
 BuildRequires: libfec-odr-devel
-BuildRequires: fdk-aac-dabplus-odr-devel
+BuildRequires: faad2-devel
 BuildRequires: libmpg123-devel
 BuildRequires: SDL2-devel
 BuildRequires: gtkmm30-devel
@@ -57,7 +57,7 @@ from a stored ensemble recording (frame-aligned ETI-NI). Both DAB (MP2) and DAB+
 %setup -q
 
 %build
-make USE_FDK-AAC=1
+make
 
 %install
 install -d %{buildroot}/usr/bin/
@@ -75,6 +75,7 @@ install dablin_gtk %{buildroot}/usr/bin/
 %changelog
 * Wed Oct 22 2016 Lucas Bickel <hairmare@purplehaze.ch> - 1.1.0-1
 - Bump to upstream version 1.1.0
+- Use faad2 aac decoder instead of fdk-aac-dabplus-odr
 
 * Wed Sep 28 2016 Lucas Bickel <hairmare@purplehaze.ch> - 1.0.0-2
 - Adapted to accommodate changes to upstream fdk-aac-dabplus-odr package
