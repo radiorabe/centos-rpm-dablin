@@ -1,8 +1,8 @@
 #
 # spec file for package dablin and subpackage dablin-gtk
 #
-# Copyright (c) 2016 Radio Bern RaBe
-#                    http://www.rabe.ch
+# Copyright (c) 2016 - 2017 Radio Bern RaBe
+#                           http://www.rabe.ch
 #
 # This program is free software: you can redistribute it and/or
 # modify it under the terms of the GNU Affero General Public 
@@ -24,7 +24,7 @@
 
 Name:     dablin
 
-Version:  1.1.0
+Version:  1.2.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 License:  GPLv3+
@@ -73,7 +73,10 @@ install dablin_gtk %{buildroot}/usr/bin/
 
 
 %changelog
-* Wed Oct 22 2016 Lucas Bickel <hairmare@purplehaze.ch> - 1.1.0-1
+* Sat Jan 28 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.2.0-1
+- Bump to upstream version 1.2.0
+
+* Sat Oct 22 2016 Lucas Bickel <hairmare@purplehaze.ch> - 1.1.0-1
 - Bump to upstream version 1.1.0
 - Use faad2 aac decoder instead of fdk-aac-dabplus-odr
 
