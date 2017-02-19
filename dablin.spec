@@ -25,9 +25,10 @@
 Name:     dablin
 
 Version:  1.3.0
-Release:  1%{?dist}
+Release:  2%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
-License:  GPLv3+
+# The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
+License:  GPLv3+ and LGPLv2.1+
 URL:      https://github.com/Opendigitalradio/dablin
 Source0:  https://github.com/Opendigitalradio/dablin/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
@@ -72,7 +73,7 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
-* Sun Feb 19 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.3.0-1
+* Sun Feb 19 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.3.0-2
 - Bump to upstream version 1.3.0
 - Switched to cmake
 - Removed libfec dependency, which is bundled now
