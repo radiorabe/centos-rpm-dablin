@@ -24,17 +24,17 @@
 
 Name:     dablin
 
-Version:  1.2.0
+Version:  1.3.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 License:  GPLv3+
 URL:      https://github.com/Opendigitalradio/dablin
 Source0:  https://github.com/Opendigitalradio/dablin/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: libfec-odr-devel
 BuildRequires: faad2-devel
-BuildRequires: libmpg123-devel
+BuildRequires: libmpg123-devel >= 1.14.0
 BuildRequires: SDL2-devel
 BuildRequires: gtkmm30-devel
 
@@ -57,12 +57,11 @@ from a stored ensemble recording (frame-aligned ETI-NI). Both DAB (MP2) and DAB+
 %setup -q
 
 %build
-make
+%cmake .
+make %{?_smp_mflags}
 
 %install
-install -d %{buildroot}/usr/bin/
-install dablin %{buildroot}/usr/bin/
-install dablin_gtk %{buildroot}/usr/bin/
+make install DESTDIR=%{buildroot}
 
 %files
 %doc README.md COPYING
@@ -73,6 +72,11 @@ install dablin_gtk %{buildroot}/usr/bin/
 
 
 %changelog
+* Sun Feb 19 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.3.0-1
+- Bump to upstream version 1.3.0
+- Switched to cmake
+- Removed libfec dependency, which is bundled now
+
 * Sat Jan 28 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.2.0-1
 - Bump to upstream version 1.2.0
 
