@@ -24,8 +24,8 @@
 
 Name:     dablin
 
-Version:  1.3.0
-Release:  2%{?dist}
+Version:  1.4.1
+Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
 License:  GPLv3+ and LGPLv2.1+
@@ -73,6 +73,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Thu Apr 20 2017 Lucas Bickel <hairmare@rabe.ch> - 1.4.1-1
+- Bump to upstream version 1.4.1
+
 * Sun Feb 19 2017 Christian Affolter <c.affolter@purplehaze.ch> - 1.3.0-2
 - Bump to upstream version 1.3.0
 - Switched to cmake
