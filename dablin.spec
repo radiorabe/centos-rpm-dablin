@@ -31,7 +31,7 @@ Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 License:  GPLv3+ and LGPLv2.1+
 URL:      https://github.com/Opendigitalradio/dablin
 Source0:  https://github.com/Opendigitalradio/dablin/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0:   https://github.com/Opendigitalradio/dablin/compare/master...radiorabe:feature/fix-build-on-legacy-gtkmm.patch
+Patch0:   https://github.com/Opendigitalradio/dablin/compare/1.4.1...radiorabe:feature/fix-build-on-legacy-gtkmm.patch
 
 BuildRequires: cmake
 BuildRequires: gcc-c++
