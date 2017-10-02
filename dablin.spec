@@ -41,18 +41,18 @@ BuildRequires: SDL2-devel
 BuildRequires: gtkmm30-devel
 
 %description
-DABlin plays a DAB/DAB+ audio service - either from a received live transmission or
-from a stored ensemble recording (frame-aligned ETI-NI). Both DAB (MP2) and DAB+ 
-(AAC-LC, HE-AAC, HE-AAC v2) services are supported.
+DABlin plays a DAB/DAB+ audio service - either from a received live
+transmission or from a stored ensemble recording (frame-aligned ETI-NI). Both
+DAB (MP2) and DAB+ (AAC-LC, HE-AAC, HE-AAC v2) services are supported.
 
 %package -n dablin-gtk
 Summary:  DAB/DAB+ receiver for Linux/GTK (including ETI-NI playback)
 Requires: %{name} = %{version}-%{release}
 
 %description -n dablin-gtk
-DABlin plays a DAB/DAB+ audio service - either from a received live transmission or
-from a stored ensemble recording (frame-aligned ETI-NI). Both DAB (MP2) and DAB+ 
-(AAC-LC, HE-AAC, HE-AAC v2) services are supported.
+DABlin plays a DAB/DAB+ audio service - either from a received live
+transmission or from a stored ensemble recording (frame-aligned ETI-NI). Both
+DAB (MP2) and DAB+ (AAC-LC, HE-AAC, HE-AAC v2) services are supported.
 
 
 %prep
