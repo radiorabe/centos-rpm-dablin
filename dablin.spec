@@ -24,7 +24,7 @@
 
 Name:     dablin
 
-Version:  1.8.0
+Version:  1.8.1
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
@@ -76,6 +76,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Mar 14 2018 Lucas Bickel <hairmare@rabe.ch> - 1.8.1-1
+- Bump to upstream version 1.8.1
+
 * Fri Feb 23 2018 Christian Affolter <c.affolter@purplehaze.ch> - 1.8.0-1
 - Bump to upstream version 1.8.0
 - Include man pages
