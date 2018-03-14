@@ -76,6 +76,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Wed Mar 14 2018 Lucas Bickel <hairmare@rabe.ch> - 1.8.1-1
+- Bump to upstream version 1.8.1
+
 * Fri Feb 23 2018 Christian Affolter <c.affolter@purplehaze.ch> - 1.8.0-1
 - Bump to upstream version 1.8.0
 - Include man pages
