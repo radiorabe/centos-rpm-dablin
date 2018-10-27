@@ -24,14 +24,13 @@
 
 Name:     dablin
 
-Version:  1.8.2
+Version:  1.9.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
 License:  GPLv3+ and LGPLv2.1+
 URL:      https://github.com/Opendigitalradio/dablin
 Source0:  https://github.com/Opendigitalradio/dablin/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-Patch0:   https://github.com/Opendigitalradio/dablin/compare/1.4.1...radiorabe:feature/fix-build-on-legacy-gtkmm.patch
 
 BuildRequires: cmake
 BuildRequires: faad2-devel
@@ -58,7 +57,6 @@ DAB (MP2) and DAB+ (AAC-LC, HE-AAC, HE-AAC v2) services are supported.
 
 %prep
 %setup -q
-%patch -P 0 -p 1
 
 %build
 %cmake .
@@ -77,6 +75,10 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Sat Oct 27 2018 Christian Affolter <c.affolter@purplehaze.ch> - 1.9.0-1
+- Bump to upstream version 1.9.0
+- Removed no longer working gtkmm patch
+
 * Sun Jun 10 2018 Lucas Bickel <hairmare@rabe.ch> - 1.8.2-1
 - Bump to upstream version 1.8.2
 - Add libatomic buildreq
