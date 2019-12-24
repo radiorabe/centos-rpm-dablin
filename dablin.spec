@@ -1,7 +1,7 @@
 #
 # spec file for package dablin and subpackage dablin-gtk
 #
-# Copyright (c) 2016 - 2018 Radio Bern RaBe
+# Copyright (c) 2016 - 2019 Radio Bern RaBe
 #                           http://www.rabe.ch
 #
 # This program is free software: you can redistribute it and/or
@@ -24,7 +24,7 @@
 
 Name:     dablin
 
-Version:  1.11.0
+Version:  1.12.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
@@ -41,19 +41,20 @@ BuildRequires: libmpg123-devel >= 1.14.0
 BuildRequires: SDL2-devel
 
 %description
-DABlin plays a DAB/DAB+ audio service - either from a received live
-transmission or from a stored ensemble recording (frame-aligned ETI-NI). Both
-DAB (MP2) and DAB+ (AAC-LC, HE-AAC, HE-AAC v2) services are supported.
+DABlin plays a DAB/DAB+ audio service – from a live transmission or from a
+stored ensemble recording (ETI-NI, or EDI AF with ETI). Both DAB (MP2) and DAB+
+(AAC-LC, HE-AAC, HE-AAC v2) services are supported.
 
 %package -n dablin-gtk
 Summary:  DAB/DAB+ receiver for Linux/GTK (including ETI-NI playback)
 Requires: %{name} = %{version}-%{release}
 
 %description -n dablin-gtk
-DABlin plays a DAB/DAB+ audio service - either from a received live
-transmission or from a stored ensemble recording (frame-aligned ETI-NI). Both
-DAB (MP2) and DAB+ (AAC-LC, HE-AAC, HE-AAC v2) services are supported.
-
+DABlin plays a DAB/DAB+ audio service – from a live transmission or from a
+stored ensemble recording (ETI-NI, or EDI AF with ETI). Both DAB (MP2) and DAB+
+(AAC-LC, HE-AAC, HE-AAC v2) services are supported.
+The GTK GUI version in addition supports the data applications Dynamic Label
+and MOT Slideshow (if used by the selected service).
 
 %prep
 %setup -q
@@ -75,6 +76,10 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Tue Dec 24 2019 Christian Affolter <c.affolter@purplehaze.ch> - 1.12.0-1
+- Bump to upstream version 1.12.0
+- Updated description according to the upstream README
+
 * Mon Jun 17 2019 Lucas Bickel <hairmare@rabe.ch> - 1.11.0-1
 - Bump to upstream version 1.11.0
 
