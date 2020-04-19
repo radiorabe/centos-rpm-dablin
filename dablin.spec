@@ -1,7 +1,7 @@
 #
 # spec file for package dablin and subpackage dablin-gtk
 #
-# Copyright (c) 2016 - 2019 Radio Bern RaBe
+# Copyright (c) 2016 - 2020 Radio Bern RaBe
 #                           http://www.rabe.ch
 #
 # This program is free software: you can redistribute it and/or
@@ -24,7 +24,7 @@
 
 Name:     dablin
 
-Version:  1.12.0
+Version:  1.13.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
@@ -76,6 +76,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Sat Apr 18 2020 Lucas Bickel <hairmare@rabe.ch> - 1.13.0-1
+- Bump to upstream version 1.13.0
+
 * Tue Dec 24 2019 Christian Affolter <c.affolter@purplehaze.ch> - 1.12.0-1
 - Bump to upstream version 1.12.0
 - Updated description according to the upstream README
