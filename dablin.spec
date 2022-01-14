@@ -22,9 +22,14 @@
 # https://github.com/radiorabe/centos-rpm-dablin
 #
 
+%if 0%{?fedora}
+%undefine _debugsource_packages
+%define __make_args -C redhat-linux-build
+%endif
+
 Name:     dablin
 
-Version:  1.13.0
+Version:  1.14.0
 Release:  1%{?dist}
 Summary:  DAB/DAB+ receiver for Linux (including ETI-NI playback)
 # The entire source code is GPLv3+ except fec/ which is LGPLv2.1+
@@ -61,10 +66,10 @@ and MOT Slideshow (if used by the selected service).
 
 %build
 %cmake .
-make %{?_smp_mflags}
+make %{?__make_args} %{?_smp_mflags}
 
 %install
-make install DESTDIR=%{buildroot}
+make %{?__make_args} install DESTDIR=%{buildroot}
 
 %files
 %doc README.md COPYING
@@ -76,6 +81,9 @@ make install DESTDIR=%{buildroot}
 
 
 %changelog
+* Fri Jan 14 2022 Lucas Bickel <hairmare@rabe.ch> - 1.14.0-1
+- Bump to upstream version 1.14.0
+
 * Sat Apr 18 2020 Lucas Bickel <hairmare@rabe.ch> - 1.13.0-1
 - Bump to upstream version 1.13.0
 
